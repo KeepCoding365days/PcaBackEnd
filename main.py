@@ -2,9 +2,6 @@ from fastapi import FastAPI,File,UploadFile
 from pathlib import Path
 app = FastAPI()
 from fastapi.middleware.cors import CORSMiddleware
-from ai_helper import classify_images
-from PIL import Image
-
 origins = [
     "*"  # Allow all origins (not recommended for production)
 ]
