@@ -32,3 +32,4 @@ Pillow
 matplotlib
 imagecodecs
 fastai
+fasttransform

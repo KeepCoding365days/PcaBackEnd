@@ -1,3 +1,8 @@
+import fasttransform
+import sys
+
+# Force Python to use fasttransform when fastcore.transform is requested
+sys.modules['fastcore.transform'] = fasttransform
 from fastai.vision.all import *
 learn=load_learner("resnet_finetuned.pkl")
 

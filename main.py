@@ -3,6 +3,7 @@ from pathlib import Path
 app = FastAPI()
 from fastapi.middleware.cors import CORSMiddleware
 from ai_helper import classify_images
+from PIL import Image
 
 origins = [
     "*"  # Allow all origins (not recommended for production)
@@ -29,9 +30,8 @@ async def upload_image(file: UploadFile = File(...)):
     file_path = UPLOAD_DIR / file.filename
     with file_path.open("wb") as f:
         f.write(await file.read())  # Save the file
-    with open(file_path) as f:
-        image_bytes=f.read()
-    grade=classify_images(image_bytes)
-    return {"grade": grade}
+    img = Image.open("test_image.jpg")
+    result = classify_images(img)
+    return {"grade": result}
 
 
