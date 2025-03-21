@@ -30,7 +30,8 @@ async def upload_image(file: UploadFile = File(...)):
     with file_path.open("wb") as f:
         f.write(await file.read())  # Save the file
     with open(file_path) as f:
-        grade=classify_images(f.read())
+        image_bytes=f.read()
+    grade=classify_images(image_bytes)
     return {"grade": grade}
 
 
