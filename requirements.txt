@@ -1,0 +1,33 @@
+-i https://pypi.org/simple
+annotated-types==0.7.0; python_version >= '3.8'
+anyio==4.9.0; python_version >= '3.9'
+click==8.1.8; python_version >= '3.7'
+exceptiongroup==1.2.2; python_version >= '3.7'
+fastapi==0.115.11; python_version >= '3.8'
+h11==0.14.0; python_version >= '3.7'
+httptools==0.6.4; python_full_version >= '3.8.0'
+idna==3.10; python_version >= '3.6'
+pydantic==2.10.6; python_version >= '3.8'
+pydantic-core==2.27.2; python_version >= '3.8'
+python-dotenv==1.0.1; python_version >= '3.8'
+pyyaml==6.0.2; python_version >= '3.8'
+sniffio==1.3.1; python_version >= '3.7'
+starlette==0.46.1; python_version >= '3.9'
+typing-extensions==4.12.2; python_version >= '3.8'
+uvicorn[standard]==0.34.0; python_version >= '3.9'
+uvloop==0.21.0; python_full_version >= '3.8.0'
+watchfiles==1.0.4; python_version >= '3.9'
+websockets==15.0.1; python_version >= '3.9'
+torch
+torchvision
+pytorch-lightning
+efficientnet-pytorch
+numpy
+pandas
+scikit-learn
+opencv-python
+scikit-image
+albumentations
+Pillow
+matplotlib
+imagecodecs
