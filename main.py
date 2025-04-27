@@ -4,6 +4,7 @@ app = FastAPI()
 from fastapi.middleware.cors import CORSMiddleware
 from ai_helper import predict_grade
 import uvicorn
+import json
 origins = [
     '127.0.0.1',
     "*"  # Allow all origins (not recommended for production)
@@ -31,7 +32,8 @@ async def upload_image(file: UploadFile = File(...)):
     print(file_path)
     grade=predict_grade(file_path)
     
-    return {"grade":grade}
+    return {"grade": int(grade)}
+
 
 
 
