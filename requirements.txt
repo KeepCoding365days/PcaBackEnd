@@ -33,3 +33,4 @@ matplotlib
 imagecodecs
 fastai
 fasttransform
+tensorflow
