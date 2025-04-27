@@ -1,0 +1,6 @@
+.env
+.pca/
+.__pycache__/
+__pycache__/ai_helper.cpython-312.pyc
+__pycache__/main.cpython-312.pyc
+/pca

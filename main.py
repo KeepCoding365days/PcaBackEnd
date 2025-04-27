@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from ai_helper import predict_grade
 import uvicorn
 origins = [
+    '127.0.0.1',
     "*"  # Allow all origins (not recommended for production)
 ]
 
@@ -24,10 +25,13 @@ UPLOAD_DIR.mkdir(exist_ok=True)
 @app.post("/predict_grade/")
 async def upload_image(file: UploadFile = File(...)):
     file_path = UPLOAD_DIR / file.filename
+    #print(file_path)
     with file_path.open("wb") as f:
         f.write(await file.read())  # Save the file
+    print(file_path)
     grade=predict_grade(file_path)
-    return {f"grade": '{grade}'}
+    
+    return {"grade":grade}
 
 
 

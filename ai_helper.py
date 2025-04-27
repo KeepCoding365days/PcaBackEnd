@@ -1,10 +1,11 @@
 import tensorflow as tf
 from tensorflow.keras.utils import load_img, img_to_array
 import numpy as np
+from PIL import Image
 def predict_grade(img_path):
     model=tf.keras.layers.TFSMLayer('patch_classifer.keras')
     
-    img_path = "/kaggle/input/pca-patches-classification/TrainingData/0/00a7fb880dc12c5de82df39b30533da9_26_5.png"  # Change to your image path
+    
     img = load_img(img_path, target_size=(256, 256))        # resize image
 
     # Convert to array
